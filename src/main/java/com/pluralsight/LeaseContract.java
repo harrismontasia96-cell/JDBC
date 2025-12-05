@@ -20,9 +20,9 @@ public class LeaseContract extends Contract {
                          String customerName,
                          String customerEmail,
                          Vehicle vehicleSold) {
-
         super(
                 "LEASE",
+                date,
                 customerName,
                 customerEmail,
                 vehicleSold.getVin(),
@@ -32,9 +32,7 @@ public class LeaseContract extends Contract {
                 vehicleSold.getVehicleType(),
                 vehicleSold.getColor(),
                 vehicleSold.getOdometer(),
-                vehicleSold.getMake() + " " + vehicleSold.getModel(),
-                0.0,
-                0.0
+                vehicleSold.getMake() + " " + vehicleSold.getModel()
         );
 
         this.vehicleSold = vehicleSold;
