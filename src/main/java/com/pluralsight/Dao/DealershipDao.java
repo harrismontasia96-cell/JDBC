@@ -19,11 +19,11 @@ public class DealershipDao { private Connection connection;
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
                 Dealership d = new Dealership(
+                        rs.getInt("dealership_id"),
                         rs.getString("name"),
                         rs.getString("address"),
                         rs.getString("phone")
                 );
-                d.setId(rs.getInt("id"));
                 return d;
             }
         } catch (SQLException e) { e.printStackTrace(); }

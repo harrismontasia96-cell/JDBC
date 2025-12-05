@@ -22,7 +22,6 @@ public class SalesContract extends Contract {
 
     public SalesContract(String date, String customerName, String customerEmail,
                          Vehicle vehicleSold, boolean finance) {
-
         super(
                 "SALE",
                 date,
@@ -35,11 +34,8 @@ public class SalesContract extends Contract {
                 vehicleSold.getVehicleType(),
                 vehicleSold.getColor(),
                 vehicleSold.getOdometer(),
-                vehicleSold.getMake() + " " + vehicleSold.getModel(),
-                0.0,
-                0.0
+                vehicleSold.getMake() + " " + vehicleSold.getModel()
         );
-
         this.finance = finance;
         this.vehicleSold = vehicleSold;
     }
@@ -73,5 +69,29 @@ public class SalesContract extends Contract {
 
         double monthlyRate = rate / 12.0;
         return (principal * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -months));
+    }
+
+    public int getVehicleId() {
+        return vehicleId;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public String getCustomerAddress() {
+        return customerAddress;
+    }
+
+    public double getSalesTax() {
+        return salesTax;
+    }
+
+    public double getProcessingFee() {
+        return processingFee;
+    }
+
+    public String getDateOfSale() {
+        return dateOfSale;
     }
 }

@@ -2,7 +2,8 @@ package com.pluralsight;
 
 import java.util.List;
 import java.util.Scanner;
-
+import com.pluralsight.Dao.DealershipDao;
+import com.pluralsight.Dao.VehicleDao;
 
 public class UserInterface {
     private Dealership dealership;

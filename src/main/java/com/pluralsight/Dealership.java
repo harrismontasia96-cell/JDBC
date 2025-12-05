@@ -4,10 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Dealership {
+
     private int id; // NEW
     private String name;
     private String address;
     private String phone;
+
+    private List<Vehicle> inventory = new ArrayList<>();
 
     public Dealership(int id, String name, String address, String phone) {
         this.id = id;
@@ -17,6 +20,8 @@ public class Dealership {
     }
 
     public int getId() { return id; }
+
+    public void setId(int id) { this.id = id; }
 
     public String getName() {
         return name;
@@ -38,6 +43,10 @@ public class Dealership {
         inventory.remove(v);
     }
 
+    public void setAllVehicles(List<Vehicle> vehicles) {
+        this.inventory = vehicles;
+    }
+
     public List<Vehicle> getAllVehicles() {
         return inventory;
     }
@@ -51,6 +60,4 @@ public class Dealership {
         }
         return matches;
     }
-
-
 }

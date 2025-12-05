@@ -1,8 +1,9 @@
 package com.pluralsight;
 
 public class Vehicle {
-    private int id;       // NEW for DB primary key
+    private int id;
     private int vin;
+    private int dealershipId;
     private int year;
     private String make;
     private String model;
@@ -11,10 +12,11 @@ public class Vehicle {
     private int odometer;
     private double price;
 
-    public Vehicle(int id, int vin, int year, String make, String model,
+    // Constructor
+    public Vehicle(int vin, int dealershipId, int year, String make, String model,
                    String vehicleType, String color, int odometer, double price) {
-        this.id = id;
         this.vin = vin;
+        this.dealershipId = dealershipId;
         this.year = year;
         this.make = make;
         this.model = model;
@@ -24,36 +26,17 @@ public class Vehicle {
         this.price = price;
     }
 
+    // Getters
+    public double getPrice() { return price; }
     public int getId() { return id; }
-
-    // Optional: add other getters and setters
-    public int getVin() {
-        return vin;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public String getMake() {
-        return make;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public String getVehicleType() {
-        return vehicleType;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public int getOdometer() {
-        return odometer;
-    }
+    public int getVin() { return vin; }
+    public int getDealershipId() { return dealershipId; }
+    public int getYear() { return year; }
+    public String getMake() { return make; }
+    public String getModel() { return model; }
+    public String getVehicleType() { return vehicleType; }
+    public String getColor() { return color; }
+    public int getOdometer() { return odometer; }
 
     @Override
     public String toString() {
@@ -61,4 +44,3 @@ public class Vehicle {
                 vin, year, make, model, vehicleType, color, odometer, price);
     }
 }
-

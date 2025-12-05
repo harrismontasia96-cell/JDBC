@@ -25,6 +25,7 @@ public class VehicleDao {
             while (rs.next()) {
                 Vehicle v = new Vehicle(
                         rs.getInt("vin"),
+                        rs.getInt("dealership_id"),
                         rs.getInt("year"),
                         rs.getString("make"),
                         rs.getString("model"),

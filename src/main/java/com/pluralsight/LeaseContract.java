@@ -55,4 +55,37 @@ public class LeaseContract extends Contract {
         return (leasePrice * monthlyRate) /
                 (1 - Math.pow(1 + monthlyRate, -LEASE_TERM_MONTHS));
     }
+
+    public int getVehicleId() {
+        return vehicleId;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public String getCustomerAddress() {
+        return customerAddress;
+    }
+
+    public double getExpectedValue() {
+        return expectedValue;
+    }
+
+    public double getLeaseFee() {
+        return leaseFee;
+    }
+
+    public double getMonthlyPaymentValue() {
+        return monthlyPayment;
+    }
+
+    public String getStartDate() {
+        return startDate;
+    }
+
+    public Vehicle getVehicle() {
+        return vehicleSold;
+    }
 }
+
